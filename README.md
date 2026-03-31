@@ -1,16 +1,16 @@
-# 🧠 Emotion Detection from Text
+Emotion Detection from Text
 
 A Python NLP project that detects emotions — **joy, sadness, anger, fear, surprise, disgust, and neutral** — from raw text. It offers three interchangeable backends (rule-based lexicon, ML classifier, and transformer) behind a clean API and a browser-based UI.
 
 ---
 
-## 📌 Problem Statement
+##  Problem Statement
 
 Understanding the emotional tone of text is valuable across many domains — mental health support, customer feedback analysis, social media monitoring, and more. This project builds an end-to-end pipeline that takes any raw text as input and outputs the dominant emotion with confidence scores.
 
 ---
 
-## ✨ Features
+##  Features
 
 | Feature | Details |
 |---|---|
@@ -23,7 +23,7 @@ Understanding the emotional tone of text is valuable across many domains — men
 
 ---
 
-## 🗂️ Project Structure
+##  Project Structure
 
 ```
 emotion-detection/
@@ -45,7 +45,7 @@ emotion-detection/
 
 ---
 
-## ⚡ Quick Start
+##  Quick Start
 
 ### 1. Clone & install
 
@@ -104,7 +104,7 @@ print(doc_result["emotion_distribution"])
 
 ---
 
-## 🤖 Training the ML Model
+##  Training the ML Model
 
 ```bash
 # With your own data (CSV with 'text' and 'label' columns)
@@ -123,7 +123,7 @@ print(det.predict("This ruined my whole day."))
 
 ---
 
-## 🌐 REST API Reference
+##  REST API Reference
 
 ### `POST /predict`
 
@@ -158,7 +158,7 @@ Returns `{"status": "ok", "method": "lexicon"}`.
 
 ---
 
-## 🧪 Running Tests
+##  Running Tests
 
 ```bash
 pytest tests/ -v
@@ -168,13 +168,13 @@ Expected output: **20+ tests passing**.
 
 ---
 
-## 🔁 Switching Backends
+##  Switching Backends
 
 | Backend | Speed | Accuracy | Requirements |
 |---|---|---|---|
-| `lexicon` | ⚡ Instant | Good for clear sentiment | None |
-| `ml` | 🏃 Fast | Better | scikit-learn + trained model |
-| `transformer` | 🐢 Slower | Best | transformers + torch |
+| `lexicon` |  Instant | Good for clear sentiment | None |
+| `ml` |  Fast | Better | scikit-learn + trained model |
+| `transformer` |  Slower | Best | transformers + torch |
 | `auto` | — | Best available | Tries transformer → ml → lexicon |
 
 To enable transformer support:
@@ -186,21 +186,21 @@ Then change `method="transformer"` in `app.py` or your script.
 
 ---
 
-## 📊 Emotion Categories
+##  Emotion Categories
 
 | Emotion | Example |
 |---|---|
-| 😄 joy | "I am so happy and excited!" |
-| 😢 sadness | "I feel so lonely and hopeless." |
-| 😠 anger | "I am furious about this injustice!" |
-| 😨 fear | "I'm terrified of what might happen." |
-| 😲 surprise | "I can't believe this happened!" |
-| 🤢 disgust | "That was absolutely revolting." |
-| 😐 neutral | "The meeting is at 3 PM." |
+|  joy | "I am so happy and excited!" |
+|  sadness | "I feel so lonely and hopeless." |
+|  anger | "I am furious about this injustice!" |
+|  fear | "I'm terrified of what might happen." |
+|  surprise | "I can't believe this happened!" |
+|  disgust | "That was absolutely revolting." |
+|  neutral | "The meeting is at 3 PM." |
 
 ---
 
-## 🛠️ Tech Stack
+##  Tech Stack
 
 - **Python 3.10+**
 - **scikit-learn** — TF-IDF vectorisation & Logistic Regression
@@ -210,12 +210,12 @@ Then change `method="transformer"` in `app.py` or your script.
 
 ---
 
-## 📄 License
+##  License
 
 MIT License — free to use, modify, and distribute.
 
 ---
 
-## 🙋 Author
+##  Author
 
 Built as a Bring Your Own Project (BYOP) capstone submission.
