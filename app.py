@@ -56,7 +56,7 @@ HTML = """
 </head>
 <body>
   <div class="card">
-    <h1>🧠 Emotion Detector</h1>
+    <h1> Emotion Detector</h1>
     <p class="sub">Analyse the emotion behind any text using NLP.</p>
     <textarea id="inputText" placeholder="Type or paste your text here…"></textarea>
     <button onclick="analyse()">Detect Emotion</button>
@@ -71,8 +71,8 @@ HTML = """
       fear: '#9f7aea', surprise: '#68d391', disgust: '#a0aec0', neutral: '#cbd5e0'
     };
     const EMOJIS = {
-      joy: '😄', sadness: '😢', anger: '😠', fear: '😨',
-      surprise: '😲', disgust: '🤢', neutral: '😐'
+      joy, sadness, anger, fear,
+      surprise, disgust, neutral
     };
 
     async function analyse() {
@@ -111,7 +111,7 @@ HTML = """
         </div>`).join('');
 
       document.getElementById('result').innerHTML = `
-        <div class="emoji">${EMOJIS[emotion] || '🤔'}</div>
+        <div class="emoji">${EMOJIS[emotion] || }</div>
         <div class="emotion-label" style="color:${COLORS[emotion]||'#1a202c'}">${emotion}</div>
         <p class="confidence">Confidence: ${(data.confidence*100).toFixed(1)}%</p>
         <span class="method-badge">Method: ${data.method}</span>
